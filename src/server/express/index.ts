@@ -1,7 +1,6 @@
 import express from 'express';
 import graphqlServer from '../graphql';
-import { upsertUser } from '../../mongo';
-import logs from './logs';
+import passport from '../passport';
 
 const app = express();
 const port = 4000;
@@ -17,11 +16,19 @@ app.get('/search', (req, res) => {
   res.send('This would be search');
 });
 
-app.get('/login', (req, res) => {
-  res.send('This would be login');
+app.get('/auth/google', passport.authenticate('google', {
+  scope: ['profile'],
+}));
+
+app.get('/auth/google/redirect', passport.authenticate('google', {
+  failureRedirect: '/login',
+}), (req, res) => {
+  res.redirect('/');
 });
 
-app.get('/logs', logs);
+app.get('/logs', (req, res) => {
+  res.send('logs')
+});
 
 export default () => {
   app.listen(port, (err) => {
