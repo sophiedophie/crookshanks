@@ -5,6 +5,7 @@ const userSchema = new Schema({
   name: 'string',
   avatar: 'string',
   loginType: 'string',
+  emailaddress: 'string',
   notes: [{ type: Schema.Types.ObjectId, ref: 'notes'}],
   books: [{ type: Schema.Types.ObjectId, ref: 'books'}], 
 }, {
