@@ -1,8 +1,8 @@
 import mongoose, { Schema } from 'mongoose';
 
 const noteSchema = new Schema({
-  title: 'string',
-  contents: 'string',
+  title: String,
+  contents: String,
   bookId: { type: Schema.Types.ObjectId, ref: 'books'},
 }, {
   timestamps: {

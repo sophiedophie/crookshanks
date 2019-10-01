@@ -1,6 +1,6 @@
 import express from 'express';
 import graphqlServer from '../graphql';
-import passport from '../passport';
+import passport from '../auth/passport';
 
 const app = express();
 const port = 4000;

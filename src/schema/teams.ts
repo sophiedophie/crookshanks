@@ -1,7 +1,7 @@
 import mongoose, { Schema } from 'mongoose';
 
 const teamSchema = new Schema({
-  name: 'string',
+  name: String,
   members: { type: Schema.Types.ObjectId, ref: 'users'},
 }, {
   timestamps: {
