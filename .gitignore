@@ -98,4 +98,4 @@ public
 .dynamodb/
 
 # Sophie secret file
-.secret
+.secret.js

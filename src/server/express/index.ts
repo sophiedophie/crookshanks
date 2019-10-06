@@ -20,9 +20,10 @@ app.get('/auth/google', passport.authenticate('google', {
   scope: ['profile'],
 }));
 
-app.get('/auth/google/redirect', passport.authenticate('google', {
+app.get('/auth/google/callback', passport.authenticate('google', {
   failureRedirect: '/login',
 }), (req, res) => {
+  console.log(req, res)
   res.redirect('/');
 });
 
