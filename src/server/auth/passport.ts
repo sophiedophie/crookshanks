@@ -11,7 +11,7 @@ passport.deserializeUser((object, done) => {
 });
 
 passport.use(new GoogleStrategy(googleAuthParams, (accessToken, refreshToken, profile, done) => {
-  console.log(accessToken, refreshToken, profile)
+  console.log(accessToken, profile)
   process.nextTick(() => {
     return done(null, profile);
   });

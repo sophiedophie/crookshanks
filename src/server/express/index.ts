@@ -5,6 +5,9 @@ import passport from '../auth/passport';
 const app = express();
 const port = 4000;
 
+app.use(passport.initialize());
+app.use(passport.session());
+
 // Wrap Express with Graphql
 graphqlServer.applyMiddleware({ app });
 
@@ -23,7 +26,6 @@ app.get('/auth/google', passport.authenticate('google', {
 app.get('/auth/google/callback', passport.authenticate('google', {
   failureRedirect: '/login',
 }), (req, res) => {
-  console.log(req, res)
   res.redirect('/');
 });
 

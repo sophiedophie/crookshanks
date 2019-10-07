@@ -2,9 +2,10 @@ import mongoose, { Schema } from 'mongoose';
 
 const User = new Schema({
   lastLogin: { type: Date, default: Date.now() },
-  name: String,
+  displayName: String,
   avatar: String,
-  snsLoginType: String,
+  provider: String,
+  locale: String,
   id: String,
   accessToken: String,
   emailaddress: String,
