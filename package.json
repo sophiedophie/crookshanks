@@ -23,7 +23,7 @@
     "apollo-server-express": "^2.9.4",
     "express": "^4.17.1",
     "graphql": "^14.5.8",
-    "mongoose": "^5.7.1",
+    "mongoose": "^5.7.5",
     "passport": "^0.4.0"
   },
   "devDependencies": {
