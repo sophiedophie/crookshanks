@@ -21,7 +21,7 @@
   "homepage": "https://github.com/sophiedophie/crookshanks#readme",
   "dependencies": {
     "apollo-server-express": "^2.9.4",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "graphql": "^14.5.8",
     "mongoose": "^5.7.1",
     "passport": "^0.4.0"
